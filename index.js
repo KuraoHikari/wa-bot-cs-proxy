@@ -25,7 +25,6 @@ app.use(
   target: process.env.WA_API_URL, // Base URL of the remote server
   changeOrigin: true,
   pathRewrite: (path, req) => {
-   // Modify the path to match the remote server's structure
    const filename = req.params.filename;
    return `/setting/pdf/${filename}`;
   },
